@@ -9,66 +9,81 @@
  */
 const employeesList = [
     {
-        "name": "Parker Terbruggen",
-        "type": "cert",
-        "timeOff": "13-10-2022"
-    }, {
-        "name": "Oliver Leffek",
-        "type": "cert",
-        "timeOff": "13-12-2021"
-    }, {
-        "name": "Kaila Ghost",
-        "type": "cert",
+        "name": "See Garrioch",
+        "type": "laborer/notCert/any",
+        "title": "Laborer",
+        "timeOff": "24-01-2023"
+      }, {
+        "name": "Derrek Ogilby",
+        "type": "pending/notCert/any",
+        "title": "Installer pending certification",
+        "timeOff": "13-09-2022"
+      }, {
+        "name": "Natasha Chessell",
+        "type": "pending/notCert/any",
+        "title": "Installer pending certification",
+        "timeOff": "08-07-2022"
+      }, {
+        "name": "Doreen Jertz",
+        "type": "laborer/notCert/any",
+        "title": "Laborer",
+        "timeOff": "27-06-2022"
+      }, {
+        "name": "Renate Geraghty",
+        "type": "laborer/notCert/any",
+        "title": "Laborer",
+        "timeOff": "11-04-2022"
+      }, {
+        "name": "Eulalie Foxhall",
+        "type": "pending/notCert/any",
+        "title": "Installer pending certification",
+        "timeOff": "05-10-2022"
+      }, {
+        "name": "Neils Lakeland",
+        "type": "cert/any",
+        "title": "Certified installer",
+        "timeOff": "05-02-2022"
+      }, {
+        "name": "Letitia Dykas",
+        "type": "laborer/notCert/any",
+        "title": "Laborer",
+        "timeOff": "16-04-2022"
+      }, {
+        "name": "Umberto Cases",
+        "type": "laborer/notCert/any",
+        "title": "Laborer",
         "timeOff": "15-02-2022"
-    }, {
-        "name": "Ronald Lavington",
-        "type": "cert",
-        "timeOff": "01-12-2021"
-    }, {
-        "name": "Tania Crossfeld",
-        "type": "laborer",
-        "timeOff": "08-02-2022"
-    }, {
-        "name": "Jay Hulcoop",
-        "type": "pending",
-        "timeOff": "30-08-2022"
-    }, {
-        "name": "Corrine Hearns",
-        "type": "pending",
-        "timeOff": "17-05-2022"
-    }, {
-        "name": "Nickolas Cumming",
-        "type": "pending",
-        "timeOff": "28-11-2022"
-    }, {
-        "name": "Luce Thompsett",
-        "type": "cert",
-        "timeOff": "07-06-2022"
-    }, {
-        "name": "Florina Cavey",
-        "type": "pending",
-        "timeOff": "29-04-2022"
-    }, {
-        "name": "Tadeas Hammerstone",
-        "type": "pending",
-        "timeOff": "28-03-2022"
-    }, {
-        "name": "Allistir Birkett",
-        "type": "pending",
-        "timeOff": "10-02-2022"
-    }, {
-        "name": "Tyne Longworth",
-        "type": "laborer",
-        "timeOff": "04-07-2022"
-    }, {
-        "name": "Taite De Cleyne",
-        "type": "cert",
-        "timeOff": "07-05-2022"
-    }, {
-        "name": "Aloysius Inglese",
-        "type": "laborer",
-        "timeOff": "14-08-2022"
-    }
+      }, {
+        "name": "Judas Antonowicz",
+        "type": "cert/any",
+        "title": "Certified installer",
+        "timeOff": "04-11-2022"
+      }, {
+        "name": "Briny Healings",
+        "type": "pending/notCert/any",
+        "title": "Installer pending certification",
+        "timeOff": "09-12-2022"
+      }, {
+        "name": "Lilla Tawton",
+        "type": "cert/any",
+        "title": "Certified installer",
+        "timeOff": "14-11-2022"
+      }, {
+        "name": "Cammi Kingscote",
+        "type": "pending/notCert/any",
+        "title": "Installer pending certification",
+        "timeOff": "13-01-2022"
+      }, {
+        "name": "Viva Hechlin",
+        "type": "laborer/notCert/any",
+        "title": "Laborer",
+        "timeOff": "30-09-2022"
+      }, {
+        "name": "Modesty Jossum",
+        "type": "cert/any",
+        "title": "Certified installer",
+        "timeOff": "20-02-2022"
+      }
 ];
 
 module.exports = employeesList;

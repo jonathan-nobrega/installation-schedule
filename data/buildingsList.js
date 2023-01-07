@@ -16,7 +16,7 @@ const buildingsList = [
     },
     {
         type: 3,
-        description: 'Hogwarts',
+        description: 'Hogwarts School',
         requestDate: '02-12-2022'
     },
     {
@@ -32,8 +32,23 @@ const buildingsList = [
     {
         type: 3,
         description: 'Stark Industries',
-        requestDate: '03-01-2023'
+        requestDate: '02-01-2023'
     },
+    {
+        type: 2,
+        description: 'Griffin Home',
+        requestDate: '04-01-2023'
+    },
+    {
+        type: 3,
+        description: 'Shopping Mall',
+        requestDate: '14-01-2023'
+    },
+    {
+        type: 3,
+        description: 'Some important commercial building',
+        requestDate: '14-01-2023'
+    }
 ]
 
-module.exports = planningDates
+module.exports = buildingsList

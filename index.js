@@ -1,37 +1,82 @@
-/**
- * minimum viable solution:
- * 
- * 1. Create dummy data: array of Workers and Buildings
- * 2. Create method schedule(buildings, employees)
- * 3. Print array with week days planning
- * 
- * Future improvements: 
- * 
- * a. Create UI - Have a better user interface than running it straight from a prompt
- * b. Create REST API - Transfer business logic to a separate backend
- * c. Create database - Extend functionallaty by storing teams presets 
- * 
- * Considerations:
- * 
- * The business logic should be handled in the back-end. Therefore, a REST API could be appropriate.
- * Let's say we realize a commercial building doesn't require 8 people to be done, but only 6.
- * The API should be able to receive the list buildings and employees, 
- * and return a schedule based on updated productivity parameters.
- * 
- */
+const buildingTypes = require('./data/buildingTypes');
+const planningDates = require('./data/planningDates');
+const buildings = require('./data/buildingsList');
+const employees = require('./data/employeesList');
 
-// Certified installers
-// Installers pending certification
-// Laborers
+class InstallationPlan {
+  constructor(types = buildingTypes, dates = planningDates) {
+    this.types = types;
+    this.dates = dates;
+    // this.buildings = [];
+    // this.employees = [];
+    this.appointments = [];
+  }
 
-// ● There are 3 types of buildings, each requiring a different set of employees. All installs are done
-// in 1 day.
-// ○ Single story homes require:
-// - 1 certified installer
-// ○ Two story homes require:
-// - 1 certified installer AND
-// - 1 installer pending certification OR a laborer
-// ○ Commercial buildings require:
-// - 2 certified installer AND
-// - 2 installers pending certification AND
-// - 4 workers of any type (cert, pending or laborer)
+  /**
+   * Creates an array with execution information for each installation
+   * @param {array} buildings 
+   * @param {array} employees 
+   */
+  schedule(buildings, employees) {
+    const dailyPlans = [];
+
+    for (let i = 0; i < this.dates.length; i++) {
+      let assignedEmployees = [];
+      let buildingsPlannings = [];
+
+      for (let j = 0; j < buildings.length; j++) {
+        const dailyPlansString = JSON.stringify(dailyPlans)
+        if (dailyPlansString.includes(buildings[j].description)) continue;
+
+        let requiredEmployees;
+        let buildingEmployees = [];
+
+        switch (buildings[j].type) {
+          case 1:
+            requiredEmployees = ['cert'];
+            break;
+          case 2:
+            requiredEmployees = ['cert', 'notCert'];
+            break;
+          case 3:
+            requiredEmployees = ['cert', 'cert', 'pending', 'pending', 'any', 'any', 'any', 'any'];
+            break;
+          default:
+            break;
+        }
+
+        for (let k = 0; k < requiredEmployees.length; k++) {
+          const employee = employees.find(a => a.type.includes(requiredEmployees[k]) && !assignedEmployees.includes(a));
+
+          if (employee && !assignedEmployees.includes(employee) && (employee.timeOff !== this.dates[i])) {
+            assignedEmployees.push(employee);
+            buildingEmployees.push(`${employee.name} (${employee.title})`);
+          } else {
+            buildingEmployees = [];
+            break;
+          }
+        }
+
+        if (buildingEmployees.length > 0) {
+          buildingsPlannings.push({
+            building: buildings[j].description,
+            employees: buildingEmployees
+          });
+          buildings[j].done = true;
+        }
+      }
+      dailyPlans.push({
+        date: this.dates[i],
+        installations: buildingsPlannings
+      });
+    }
+    return dailyPlans;
+  }
+}
+
+const installation = new InstallationPlan();
+const result = installation.schedule(buildings, employees);
+
+console.log(JSON.stringify(result, null, 2));
+
+module.exports = InstallationPlan;
