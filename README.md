@@ -7,6 +7,17 @@
 
 ## Running the app:
 
+Clone the project and open project folder:
+
+```bash
+## cloning repository
+git clone https://github.com/moraesjon/installation-schedule.git
+
+## opening folder
+cd installation-schedule
+
+```
+
 Make sure you have Node.js installed. Install dependencies and then run the app.
 
 ```bash
