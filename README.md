@@ -28,5 +28,6 @@ npm test
 
 ```
 
+<img width="789" alt="image" src="https://user-images.githubusercontent.com/53060300/211134122-568df268-73d4-4de2-8535-8feb3406041b.png">
 
 
