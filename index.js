@@ -1,15 +1,10 @@
-const buildingTypes = require('./data/buildingTypes');
 const planningDates = require('./data/planningDates');
 const buildings = require('./data/buildingsList');
 const employees = require('./data/employeesList');
 
 class InstallationPlan {
-  constructor(types = buildingTypes, dates = planningDates) {
-    this.types = types;
+  constructor(dates = planningDates) {
     this.dates = dates;
-    // this.buildings = [];
-    // this.employees = [];
-    this.appointments = [];
   }
 
   /**
@@ -25,7 +20,7 @@ class InstallationPlan {
       let buildingsPlannings = [];
 
       for (let j = 0; j < buildings.length; j++) {
-        const dailyPlansString = JSON.stringify(dailyPlans)
+        const dailyPlansString = JSON.stringify(dailyPlans);
         if (dailyPlansString.includes(buildings[j].description)) continue;
 
         let requiredEmployees;
@@ -59,10 +54,9 @@ class InstallationPlan {
 
         if (buildingEmployees.length > 0) {
           buildingsPlannings.push({
-            building: buildings[j].description,
+            ...buildings[j],
             employees: buildingEmployees
           });
-          buildings[j].done = true;
         }
       }
       dailyPlans.push({
@@ -79,4 +73,4 @@ const result = installation.schedule(buildings, employees);
 
 console.log(JSON.stringify(result, null, 2));
 
-module.exports = InstallationPlan;
+module.exports = result;

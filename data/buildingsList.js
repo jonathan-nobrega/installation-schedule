@@ -12,42 +12,42 @@ const buildingsList = [
     {
         type: 2,
         description: 'Jetsons Home',
-        requestDate: '26-11-2022'
+        requestDate: '19-11-2022'
     },
     {
         type: 3,
         description: 'Hogwarts School',
-        requestDate: '02-12-2022'
+        requestDate: '22-11-2022'
     },
     {
         type: 1,
         description: 'Simpsons Home',
-        requestDate: '09-12-2022'
+        requestDate: '05-12-2022'
     },
     {
         type: 2,
         description: 'Adams Home',
-        requestDate: '15-12-2022'
+        requestDate: '09-12-2022'
     },
     {
         type: 3,
         description: 'Stark Industries',
-        requestDate: '02-01-2023'
+        requestDate: '10-12-2022'
     },
     {
         type: 2,
         description: 'Griffin Home',
-        requestDate: '04-01-2023'
+        requestDate: '19-12-2022'
     },
     {
         type: 3,
         description: 'Shopping Mall',
-        requestDate: '14-01-2023'
+        requestDate: '22-12-2022'
     },
     {
         type: 3,
-        description: 'Some important commercial building',
-        requestDate: '14-01-2023'
+        description: 'Raleigh Museum',
+        requestDate: '05-01-2023'
     }
 ]
 
