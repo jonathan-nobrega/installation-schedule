@@ -34,7 +34,7 @@ npm start
 Some testing cenarios were made using Jest:
 
 ```bash
-## installing node modules
+## running tests scripts
 npm test
 
 ```
