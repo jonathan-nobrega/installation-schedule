@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config ./jest.config.js --watch --silent=true",
+    "test": "jest --config ./jest.config.js --watchAll --silent=true",
     "dev": "nodemon .",
     "start": "node ."
   },
