@@ -1,7 +1,7 @@
 
 ## Minimum viable solution:
 
-1. Create dummy data: array of Workers and Buildings
+1. Create dummy data: array of employess, buildings, and working dates.
 2. Create method schedule(buildings, employees)
 3. Print array with week days planning
 
