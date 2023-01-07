@@ -20,7 +20,7 @@ npm start
 
 ## Testing the app
 
-Some testing cenarios were drawn using Jest:
+Some testing cenarios were made using Jest:
 
 ```bash
 ## installing node modules
