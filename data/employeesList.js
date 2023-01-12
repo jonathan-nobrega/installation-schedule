@@ -1,6 +1,6 @@
 /**
  * List of active employees
- * Employees types correspond to the followinf rules:
+ * Employees types correspond to the following rules:
  *      cert: Certified installers
  *      pending: Installers pending certification
  *      notCert: Installers pending certification OR a laborer
@@ -48,7 +48,7 @@ const employeesList = [
     name: "Neils Lakeland",
     type: "cert/any",
     title: "Certified installer",
-    timeOff: "05-02-2022"
+    timeOff: "12-01-2023"
   },
   {
     name: "Letitia Dykas",
@@ -66,7 +66,7 @@ const employeesList = [
     name: "Judas Antonowicz",
     type: "cert/any",
     title: "Certified installer",
-    timeOff: "04-11-2022"
+    timeOff: "12-01-2023"
   },
   {
     name: "Briny Healings",
@@ -78,7 +78,7 @@ const employeesList = [
     name: "Lilla Tawton",
     type: "cert/any",
     title: "Certified installer",
-    timeOff: "14-11-2022"
+    timeOff: "12-01-2023"
   },
   {
     name: "Cammi Kingscote",
@@ -96,7 +96,7 @@ const employeesList = [
     name: "Modesty Jossum",
     type: "cert/any",
     title: "Certified installer",
-    timeOff: "20-02-2022"
+    timeOff: "13-01-2023"
   }
 ];
 
